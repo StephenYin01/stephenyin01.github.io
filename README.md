@@ -1,2 +1,2 @@
-# stephenyin01.github.io
+# Stephen Yin
 A personal website for Stephen Yin
