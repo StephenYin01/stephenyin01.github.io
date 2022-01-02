@@ -2073,6 +2073,12 @@ input, select, textarea {
 			padding: 1.5em 0 0.75em 0;
 		}
 
+		#header .bottom .title {
+			font-size: 0.8em;
+			display: block;
+			text-align: center;
+		}
+
 			#header .bottom > :last-child {
 				margin-bottom: 0;
 			}
