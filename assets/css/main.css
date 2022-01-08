@@ -7,6 +7,11 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+/*
+	Color palette: https://colorpalettes.net/color-palette-3506/
+	#020201; #6f859b; #c2c5cb; #f2e8e2; #e3bab3
+*/
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -216,7 +221,28 @@ input, select, textarea {
 		margin: 0 auto;
 		max-width: 100%;
 		width: 1400px;
+		position: relative;
 	}
+
+		.container .tag {
+			position: absolute;
+			top: 0;
+			right: 1em;
+		}
+
+		.container a .chinese-name {
+			display: none;
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-size: inherit;
+		}
+
+			.container a:hover .chinese-name  {
+				display: inline;
+			}
+
+			.container a:hover .english-name {
+				display: none;
+			}
 
 		@media screen and (min-width: 961px) and (max-width: 1880px) {
 
@@ -248,12 +274,22 @@ input, select, textarea {
 				width: 100%;
 			}
 
+			.container .tag {
+				position: static;
+				margin-top: 10px;
+			}
+
 		}
 
 		@media screen and (max-width: 736px) {
 
 			.container {
 				width: 100%;
+			}
+
+			.container .tag {
+				position: static;
+				margin-top: 10px;
 			}
 
 		}
@@ -1744,6 +1780,25 @@ input, select, textarea {
 
 /* Image */
 
+	.image-attribution {
+		position: absolute;
+		font-size: 0.75em;
+		bottom: -13.33em;
+		right: 0.5em;
+	}
+
+		/* For Cover Photo Only */
+		#cover-attribution {
+			color: #ffffff;
+		}
+
+	#image-education {
+		float: right;
+		height: 5em;
+		width: auto;
+		margin-bottom: 1em;
+	}
+
 	.image {
 		display: inline-block;
 		border: 0;
@@ -1754,15 +1809,15 @@ input, select, textarea {
 			width: 100%;
 		}
 
-		.image.avatar48 {
-			width: 48px;
-			height: 48px;
+		.image.avatar72 {
+			width: 72px;
+			height: 72px;
 			background: #f00;
 		}
 
-			.image.avatar48 img {
-				width: 48px;
-				height: 48px;
+			.image.avatar72 img {
+				width: 72px;
+				height: 72px;
 			}
 
 		.image.fit {
@@ -1916,14 +1971,18 @@ input, select, textarea {
 		}
 
 		table td {
-			padding: 0.5em 1em 0.5em 1em;
+			padding: 0.25em 1em 0.25em 1em;
+			width: 50%;
+			font-size: 0.8em;
+			color: black;
 		}
 
 		table th {
 			text-align: left;
-			padding: 0.5em 1em 0.5em 1em;
+			padding: 0.25em 1em 0.25em 1em;
 			color: #fff;
 			background: #222729 url("images/overlay.png");
+			font-size: 0.8em;
 		}
 
 		table thead {
@@ -1947,8 +2006,7 @@ input, select, textarea {
 		border-radius: 0.35em;
 		color: #fff !important;
 		text-decoration: none;
-		padding: 0.75em 2.5em 0.75em 2.5em;
-		background-color: #8ebebc;
+		background-color: #6f859b;
 		border: 0;
 		cursor: pointer;
 		background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("images/overlay.png");
@@ -1960,13 +2018,24 @@ input, select, textarea {
 		-ms-transition: background-color 0.35s ease-in-out;
 		transition: background-color 0.35s ease-in-out;
 	}
+	
+	input[type="submit"] {
+		padding: 0.5em 2em 0.5em 2em;
+	}
+
+	input[type="button"],
+	input[type="reset"],
+	button,
+	.button {
+		padding: 0.75em 2.5em 0.75em 2.5em;
+	}
 
 		input[type="button"]:hover,
 		input[type="submit"]:hover,
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: #9ececc;
+			background-color: #7f8fa0;
 		}
 
 		input[type="button"]:active,
@@ -1974,7 +2043,7 @@ input, select, textarea {
 		input[type="reset"]:active,
 		button:active,
 		.button:active {
-			background-color: #7eaeac;
+			background-color: #5e7892;
 		}
 
 /* Item */
@@ -1992,8 +2061,18 @@ input, select, textarea {
 		}
 
 			.item header h3 {
-				font-size: 1em;
+				font-weight: bold;
 			}
+
+			.item header p {
+				padding-left: .5em;
+				padding-right: .5em;
+				text-align: left;
+			}
+		.item p, .item span {
+			text-align: left;
+			color: black;
+		}
 
 /* Icons */
 
@@ -2077,6 +2156,7 @@ input, select, textarea {
 			font-size: 0.8em;
 			display: block;
 			text-align: center;
+			color: rgba(255, 255, 255, 0.65);
 		}
 
 			#header .bottom > :last-child {
@@ -2225,7 +2305,7 @@ input, select, textarea {
 
 			#main > section.dark {
 				color: #ddd;
-				color: rgba(255, 255, 255, 0.75);
+				color: rgba(0, 0, 0, 0.75);
 			}
 
 				#main > section.dark h2, #main > section.dark h3, #main > section.dark h4, #main > section.dark h5, #main > section.dark h6 {
@@ -2238,7 +2318,7 @@ input, select, textarea {
 				}
 
 				#main > section.dark a {
-					color: #fff;
+					color: inherit;
 					border-color: inherit;
 				}
 
@@ -2249,12 +2329,12 @@ input, select, textarea {
 			#main > section.cover {
 				padding: 10em 0;
 				background-size: cover;
-				background-position: center center;
+				background-position: center 55%;
 			}
 
 			#main > section.one {
-				background-color: #81918E;
-				background-image: url("../../images/banner.jpg");
+				background-color: #81918e;
+				background-image: url(../../images/snow1.JPG);
 			}
 
 			#main > section.two {
@@ -2262,11 +2342,19 @@ input, select, textarea {
 			}
 
 			#main > section.three {
-				background-color: #ecf1f1;
+				background-color: rgb(239, 245, 245);
 			}
 
 			#main > section.four {
-				background-color: #e8edec;
+				background-color: rgb(235, 241, 241);
+			}
+
+			#main > section.five {
+				background-color: rgb(232, 237, 236);
+			}
+
+			#main > section.six {
+				background-color: rgb(227, 231, 230);
 			}
 
 /* Wide */
@@ -2311,6 +2399,13 @@ input, select, textarea {
 
 			#main section.cover {
 				padding: 5em 0;
+			}
+
+		/* Image */
+
+			.image-attribution {
+				bottom: -6.66em;
+				right: 0.5em;
 			}
 
 	}
@@ -2578,6 +2673,17 @@ input, select, textarea {
 				#main section.cover {
 					padding: 4em 0;
 				}
+				
+		/* Image */
+
+			.image-attribution {
+				bottom: -5.33em;
+				right: 0.5em;
+			}
+
+			#image-education {
+				float: none;
+			}
 
 	}
 
@@ -2621,6 +2727,17 @@ input, select, textarea {
 				#main section.cover header {
 					padding: 0 1em;
 				}
+				
+		/* Image */
+
+			.image-attribution {
+				bottom: -5.33em;
+				right: 0.5em;
+			}
+
+			#image-education {
+				float: none;
+			}
 
 		/* Footer */
 

@@ -1,0 +1,71 @@
+@import url("fontawesome-all.min.css");
+
+html, body {
+    height: 100%;
+}
+
+@keyframes bgcolor {
+    0% {
+        background-color: #020201
+    }
+
+    20% {
+        background-color: #6f859b
+    }
+
+    40% {
+        background-color: #c2c5cb
+    }
+
+    60% {
+        background-color: #f2e8e2
+    }
+
+    80% {
+        background-color: #e3bab3
+    }
+
+    100% {
+        background-color: #020201
+    }
+}
+
+body {
+    /* Animation */
+    -webkit-animation: bgcolor 20s infinite;
+    animation: bgcolor 10s infinite;
+    -webkit-animation-direction: forwards;
+    animation-direction: forwards;
+
+    /* Main */
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 19pt;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    background-color: #020201;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, a {
+    margin: 0px 0px .2em 0px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: dotted 1px rgba(255, 255, 255, 0.5);
+    -moz-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+    -webkit-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+    -ms-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+    transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+    outline: 0;
+}
+
+    a:hover {
+        color: #E27689;
+        border-bottom-color: rgba(255, 255, 255, 0);
+    }
